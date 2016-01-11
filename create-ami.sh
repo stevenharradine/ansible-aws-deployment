@@ -1,6 +1,6 @@
-printf "create image from $instance_id"
+printf "create image "
 image_id=`aws ec2 create-image --instance-id=$instance_id --name=$name | jsawk "return this.ImageId"`
-printf "($image_id)"
+printf "$image_id from $instance_id"
 
 # wait till the image is available
 while true
