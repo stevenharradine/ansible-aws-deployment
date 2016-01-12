@@ -6,7 +6,7 @@
   when: aws_deploymentment_deploy_application_code
 
 - name: read instance tags
-  shell: "scripts/get-role.sh"
+  shell: "./scripts/get-role.sh"
   register: role
 
 - name: create image of prototype
