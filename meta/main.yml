@@ -1,0 +1,19 @@
+---
+#dependencies:
+#  - role: telusdigital.role
+galaxy_info:
+  author: "Steven Harradine"
+  company: "TELUS digital"
+  description: "Ansible role to deploy infrastructure and application code"
+  license: ISC
+  platforms:
+    - name: Ubuntu
+      versions:
+      - lucid
+      - precise
+      - trusty
+      - utopic
+      - vivid
+  categories:
+    - web
+    - cloud

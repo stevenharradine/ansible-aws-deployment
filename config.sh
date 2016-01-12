@@ -1,4 +1,4 @@
 instance_id=$1
 
-domain={{ domain }}
-autoscaling_group_desired_capacity={{ desired_capacity }}
+domain=teluswebteam.com
+autoscaling_group_desired_capacity=1
