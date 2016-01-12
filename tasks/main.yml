@@ -3,3 +3,8 @@
   uri:
     url: "{{ aws_deploymentment_application_autodeploy_endpoint }}"
     method: POST
+
+- name: create image of prototype
+  ec2_ami:
+    instance_id: "{{ aws_deploymentment_instance_id }}"
+    wait: yes
