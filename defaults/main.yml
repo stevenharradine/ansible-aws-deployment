@@ -3,3 +3,5 @@ aws_deploymentment_application_autodeploy_endpoint: "http://application-direct.{
 aws_deploymentment_instance_id: ""
 
 aws_deploymentment_deploy_application_code: no
+
+aws_deploymentment_region: "{% if environment_tier == 'production' %}us-east-1{% elif environment_tier == 'staging' %}us-west-2{% elif environment_tier == 'development' %}us-west-1{% elif environment_tier == 'next' %}eu-west-1{% endif %}"
