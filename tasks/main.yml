@@ -1,1 +1,5 @@
 ---
+- name: deploy application code
+  uri:
+    url: "{{ aws_deploymentment_application_autodeploy_endpoint }}"
+    method: POST

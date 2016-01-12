@@ -1,1 +1,2 @@
 ---
+aws_deploymentment_application_autodeploy_endpoint: "{{ $role }}-direct.{{ $project }}-{{ $environment_tier }}.{{ $domain }}:81"
