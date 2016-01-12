@@ -10,3 +10,4 @@
     instance_id: "{{ aws_deploymentment_instance_id }}"
     wait: yes
     region: us-west-2
+    name: "{{ project }}-test"
