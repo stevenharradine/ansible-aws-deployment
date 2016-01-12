@@ -1,3 +1,3 @@
 ---
-aws_deploymentment_application_autodeploy_endpoint: "http://{{ role }}-direct.{{ project }}-{{ environment_tier }}.{{ domain }}:81"
+aws_deploymentment_application_autodeploy_endpoint: "http://application-direct.{{ project }}-{{ environment_tier }}.{{ domain }}:81"
 aws_deploymentment_instance_id: ""
