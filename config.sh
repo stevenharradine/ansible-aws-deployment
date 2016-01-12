@@ -1,7 +1,4 @@
+instance_id=$1
+
 domain={{ domain }}
-project={{ project }}
-environment_tier={{ environment_tier }}
-role={{ role }}
-instance_id=
-instance_type=
-autoscaling_group_desired_capacity=
+autoscaling_group_desired_capacity={{ desired_capacity }}

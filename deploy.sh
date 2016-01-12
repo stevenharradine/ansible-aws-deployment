@@ -2,6 +2,7 @@
 
 source config.sh
 
+source get-tags.sh
 source vars.sh
 
 source deploy-app-code.sh
