@@ -1,3 +1,17 @@
 ---
-- include: deploy.yml
-  with_items: required_systems
+- name: "deploy application code {{ aws_deploymentment_application_autodeploy_endpoint }}"
+  uri:
+    url: "{{ aws_deploymentment_application_autodeploy_endpoint }}"
+    method: POST
+  when: aws_deploymentment_deploy_application_code
+
+- name: read instance tags
+  shell: "scripts/get-role.sh"
+  register: role
+
+- name: create image of prototype
+  ec2_ami:
+    instance_id: "{{ aws_deploymentment_instance_id }}"
+    wait: yes
+    region: "{{ aws_deploymentment_region }}"
+    name: "{{ project }}-test"
