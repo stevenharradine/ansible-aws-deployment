@@ -18,4 +18,4 @@
     instance_id: "{{ aws_deploymentment_instance_id }}"
     wait: yes
     region: "{{ aws_deploymentment_region }}"
-    name: "{{ project }}-test"
+    name: "{{ project }}-{{ timestamp }}"
