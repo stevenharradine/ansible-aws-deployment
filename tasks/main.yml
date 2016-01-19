@@ -9,6 +9,10 @@
   shell: "instance_id={{ aws_deploymentment_instance_id }} && /etc/ansible/roles/stevenharradine.aws-deployment/scripts/get-role.sh"
   register: role
 
+- name: generate timestamp
+  shell: "date +%Y%m%d%H%M%S"
+  register: timestamp
+
 - name: create image of prototype
   ec2_ami:
     instance_id: "{{ aws_deploymentment_instance_id }}"
