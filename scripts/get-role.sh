@@ -10,6 +10,6 @@ do
   current_key=`echo $cached_instance_json | jsawk "return this.Reservations[0].Instances[0].Tags[$currentIndex].Key"`
 
   if [ $current_key == "Role" ]; then
-    echo $cached_instance_json | jsawk "return this.Reservations[0].Instances[0].Tags[$currentIndex].Value"
+    echo `$cached_instance_json | jsawk "return this.Reservations[0].Instances[0].Tags[$currentIndex].Value"`
   fi
 done
