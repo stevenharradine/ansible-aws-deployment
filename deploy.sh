@@ -11,4 +11,5 @@ source get-security-group-id.sh
 source create-launch-configuration.sh
 source use-new-launch-configuration.sh
 source scale-up.sh
+source wait-scale-up.sh
 source scale-down.sh
