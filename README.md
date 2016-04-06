@@ -13,6 +13,16 @@ Script that will build an image from a known instance, make a new launch configu
 ## configure
 in `config.sh` set your domain and desired number of instances in the auto scaling group.
 
+You have to fill this out. Make sure you have to AWS Access Key and Secret Access Key handy.
+
+```
+$ aws configure 
+AWS Access Key ID [None]: 
+AWS Secret Access Key [None]: 
+Default region name [None]: us-west-2
+Default output format [None]: 
+```
+
 ## usage
 ```
 ./deploy.sh {{ instance_id }}
