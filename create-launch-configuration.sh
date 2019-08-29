@@ -7,5 +7,9 @@ launch_configuration="aws autoscaling create-launch-configuration \
   --associate-public-ip-address \
   --security-groups $security_group_ids"
 
+  if [ $environment_tier != "production" ]; then
+    launch_configuration="$launch_configuration --spot-price $spot_price"
+  fi
+
  `$launch_configuration`
 echo " . done"
