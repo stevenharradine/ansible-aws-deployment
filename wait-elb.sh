@@ -1,5 +1,6 @@
 printf "Waiting for addition to ELB"
 cached_instance_json=`aws elb describe-instance-health \
+  --region $region \
   --load-balancer-name $autoscaling_group_name`
 
 number_of_tags=`echo $cached_instance_json | \
@@ -19,6 +20,7 @@ while [ $number_of_tags -ne $autoscaling_group_desired_capacity_double ]; do
     sleep 10
 
     cached_instance_json=`aws elb describe-instance-health \
+      --region $region \
       --load-balancer-name $autoscaling_group_name`
 
     number_of_tags=`echo $cached_instance_json | \

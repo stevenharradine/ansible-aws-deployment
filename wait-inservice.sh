@@ -16,6 +16,7 @@ while [ $all_instances_inservice == false ]; do
     sleep 10
 
     cached_instance_json=`aws elb describe-instance-health \
+      --region $region \
       --load-balancer-name $autoscaling_group_name`
 
     number_of_tags=`echo $cached_instance_json | \

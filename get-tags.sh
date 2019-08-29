@@ -1,5 +1,6 @@
 printf "scan tags"
 cached_instance_json=`aws ec2 describe-instances \
+  --region $region \
   --instance-ids $instance_id`
 
 number_of_tags=`echo $cached_instance_json | \
