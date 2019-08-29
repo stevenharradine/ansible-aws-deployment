@@ -31,6 +31,7 @@ Default output format [None]:
 ```
 $ ./deploy.sh i-a1b2c3d4
 
+find prototype region . done (us-west-2)
 scan tags . done
 deploy app code . done
 create image ami-a1b2c3d4 from i-a1b2c3d4 . . . . . done (available)
@@ -38,5 +39,7 @@ get security group ids for i-a1b2c3d4 . done (sg-a1b2c3d4)
 create launch configuration (project-role-20160111215758) . done
 update autoscaling group (project-role) to use new launch configuration (project-role-20160111215758) . done
 scale up . . done
+Waiting for addition to ELB . . . Done
+Waiting for instance to become InService . . . . . . . Done
 scale down . . . . . . . . . . done
 ```
